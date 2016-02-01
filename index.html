@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="//vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		.col-xs-3 span { font-size: 12px; }
+		.thumbnail { height: 120px; margin-bottom: 0; }
+		.subtext { padding: 5px 0 10px 0; display: block; text-align: center; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3>Фото ТОП</h3>
+		<div class="alert alert-warning" role="alert">
+			С помощью данного приложения можно узнать какие фотографии пользуются
+			наибольшей популярностью.
+		</div>		
+
+		<h4>Выберите профиль</h4>
+		<select id="select_profile" class="form-control"></select>
+
+		<br />
+
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a id="profile_tab" href="#profile" role="tab" data-toggle="tab">Аватарки</a></li>
+			<li><a id="wall_tab" href="#wall" role="tab" data-toggle="tab">Стена</a></li>
+			<li><a id="albums_tab" href="#albums" role="tab" data-toggle="tab">Фотоальбомы</a></li>
+			<!--<li><a id="friends_tab" href="#friends" role="tab" data-toggle="tab">Друзья</a></li>-->
+		</ul>
+
+		<div class="tab-content">
+			<div id="profile" class="row tab-pane active"></div>
+			<div id="wall" class="row tab-pane"></div>
+			<div id="albums" class="row tab-pane"></div>
+			<!--<div id="friends" class="row tab-pane"></div>-->
+		</div>
+
+		<br />
+
+		<button type="button" class="btn btn-primary" onclick="VK.callMethod('showInviteBox')">
+			Пригласить друзей
+		</button>
+	</div>
+
+	<script src="js/jquery-latest.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
+
+
+
